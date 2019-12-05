@@ -1,0 +1,10 @@
+{ "project_name": "project"
+, "project_version": "0.0.1"
+, "project_description": "No description"
+, "project_slug": "{{cookiecutter.project_name.lower().replace(' ', '-')}}"
+, "full_name": "John Doe"
+, "email": "johnd@example.com"
+, "github_username": "johnd"
+, "conan_username": "{{cookiecutter.github_username}}"
+, "_extensions": ["jinja2_time.TimeExtension"]
+}

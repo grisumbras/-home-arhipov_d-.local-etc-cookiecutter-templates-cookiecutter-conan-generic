@@ -1,0 +1,52 @@
+= {{cookiecutter.project_name}}
+{%- if cookiecutter.project_name != cookiecutter.project_slug %} _({{cookiecutter.project_slug}})_{% endif %}
+:version: {{cookiecutter.project_version}}
+
+image:https://api.bintray.com/packages/{{cookiecutter.conan_username}}/conan/{{cookiecutter.project_slug}}%3A{{cookiecutter.conan_username}}/images/download.svg?version={version}%3Atesting[Download,link=https://bintray.com/{{cookiecutter.github_username}}/conan/{{cookiecutter.project_slug}}%3A{{cookiecutter.github_username}}/{version}%3Astable/link]
+image:https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/workflows/Build/badge.svg?branch=master[Build status,link=https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/actions]
+
+____
+{{cookiecutter.project_description}}
+____
+
+== Install
+
+=== Using https://conan.io[Conan]
+Add the Conan remote that contains the package:
+[source,shell]
+----
+$ conan remote add {{cookiecutter.conan_username}} https://api.bintray.com/conan/{{cookiecutter.conan_username}}/conan
+----
+
+Then put into your `conanfile.txt`
+[source,ini,subs="attributes+"]
+----
+[requires]
+{{cookiecutter.project_slug}}/{version}@{{cookiecutter.conan_username}}/stable
+----
+
+Or into your `conanfile.py`
+[source,py,subs="attributes+"]
+----
+class YourConan(ConanFile):
+  requires = '{{cookiecutter.project_slug}}/{version}@{{cookiecutter.conan_username}}/stable'
+----
+
+=== From sources
+[source,shell]
+----
+$ git clone https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}.git
+$ cd {{cookiecutter.project_slug}}
+$ b2 install --prefix=<installation prefix>
+----
+
+== Usage
+
+== Maintainer
+{{cookiecutter.full_name}} <{{cookiecutter.email}}>
+
+== Contributing
+Patches welcome!
+
+== License
+link:LICENSE[BSL-1.0] (C) {%now 'local', '%Y'%} {{cookiecutter.full_name}}

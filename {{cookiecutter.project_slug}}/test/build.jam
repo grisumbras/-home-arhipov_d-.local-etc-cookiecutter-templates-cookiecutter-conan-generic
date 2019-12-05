@@ -1,0 +1,4 @@
+import testomg ;
+
+
+project {{cookiecutter.project_slug}}-test ;

@@ -1,0 +1,25 @@
+= cookiecutter-conan-generic
+
+____
+Cookiecutter template for a generic project built with b2 and packaged with
+Conan.
+____
+
+== Install
+Cookiecutter can automatically pull templates from GitHub, see <<Usage>>.
+
+== Usage
+
+[source,shell]
+----
+$ cookiecutter gh:grisumbras/cookiecutter-conan-generic
+----
+
+== Maintainer
+Dmitry Arkhipov <grisumbras@gmail.com>
+
+== Contributing
+Patches welcome!
+
+== License
+link:LICENSE[BSL-1.0] (C) 2019 Dmitry Arkhipov
