@@ -2,3 +2,6 @@ project {{cookiecutter.project_slug}} ;
 
 
 alias libs ;
+
+alias install ;
+explicit install ;

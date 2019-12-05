@@ -1,4 +1,4 @@
-import testomg ;
+import testing ;
 
 
 project {{cookiecutter.project_slug}}-test ;

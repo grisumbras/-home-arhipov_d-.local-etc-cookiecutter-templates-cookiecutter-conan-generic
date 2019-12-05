@@ -1,9 +1,11 @@
 = cookiecutter-conan-generic
 
 ____
-Cookiecutter template for a generic project built with b2 and packaged with
-Conan.
+Cookiecutter template for a generic Conan project.
 ____
+
+This cookiecutter template creates a non-specific project built with b2 and
+packaged with Conan.
 
 == Install
 Cookiecutter can automatically pull templates from GitHub, see <<Usage>>.
