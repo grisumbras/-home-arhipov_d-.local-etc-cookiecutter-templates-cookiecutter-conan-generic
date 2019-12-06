@@ -1,7 +1,14 @@
+import package ;
+
+
 project {{cookiecutter.project_slug}} ;
+constant VERSION : {{cookiecutter.project_version}} ;
 
 
 alias libs ;
 
-alias install ;
-explicit install ;
+
+package.install-data install-license : {{cookiecutter.project_slug}} : LICENSE ;
+
+alias install : install-license ;
+explicit install install-license ;
